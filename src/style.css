@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-style: normal;
+}
+
+body {
+  background-color: rgb(235, 235, 235);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: rgb(250, 250, 250);
+  width: 80%;
+  height: 70vh;
+  margin-top: 100px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 3fr 1fr;
+  justify-items: start;
+  align-items: center;
+  box-shadow:
+    0 8px 10px lightgray,
+    -10px 8px 15px lightgray,
+    10px 8px 15px lightgray;
+}
+
+.title,
+.addTask,
+.items,
+.footer,
+.task {
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid rgb(235, 235, 235);
+  display: flex;
+  align-items: center;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow-y: scroll;
+}
+
+.items:nth-child(3n+0) {
+  border-bottom: none;
+}
+
+.titleText,
+.addTaskText,
+.footerText {
+  padding-left: 2%;
+  font-size: 22px;
+}
+
+.fa-refresh {
+  margin-left: auto;
+  margin-bottom: 15px;
+  padding-left: 4%;
+  color: rgb(146, 146, 146);
+  transform: rotate(90deg);
+}
+
+.addTaskText {
+  width: 90%;
+  line-height: 200%;
+  font-style: italic;
+  background-color: transparent;
+}
+
+.addTaskText:focus {
+  outline: none;
+}
+
+.fa-level-down {
+  margin-left: auto;
+  margin-bottom: 20px;
+  padding-left: 4%;
+  color: lightgray;
+  transform: rotate(90deg);
+}
+
+.task {
+  padding: 0 2%;
+  font-size: 22px;
+  flex: 0 0 33.33%;
+  column-gap: 2%;
+}
+
+.highlightedTask {
+  background-color: rgb(255, 255, 200);
+}
+
+.checkbox {
+  width: 22px;
+  height: 22px;
+  border: 2px;
+}
+
+.taskToDo {
+  width: 100%;
+  line-height: 200%;
+  background-color: transparent;
+  font-size: 22px;
+}
+
+.taskToDoChecked {
+  text-decoration: line-through;
+  color: rgb(175, 175, 175);
+}
+
+.taskToDo:focus {
+  outline: none;
+}
+
+.fa-ellipsis-v {
+  color: lightgray;
+  cursor: move;
+}
+
+.fa-trash-o {
+  color: rgb(160, 159, 159);
+  cursor: pointer;
+}
+
+.footer {
+  background-color: rgb(242, 242, 242);
+  justify-content: center;
+}
+
+.footerText {
+  color: rgb(169, 167, 167);
+  cursor: pointer;
+}
